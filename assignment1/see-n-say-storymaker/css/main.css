@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* Assignment 1 | COMP1073 Client-Side JavaScript */
+
+/*************************
+    GENERAL FORMATTING
+**************************/
+/* body styling for entire document */
+body {
+    /* set grid area for two sections (items on left, buttons on right) */
+    display: grid;
+    grid-template-areas: section section;
+    grid-template-columns: 60% 40%;
+    /* set yellow background colour to match toy */
+    background-color: yellow;
+    margin: 0px;
+}
+/* h1 styling for numbers at top of items div */
+h1 {
+    /* white rounded border around h1 elements to match toy */
+    border: 5px solid white;
+    border-radius: 50%;
+    /* margins and padding used to better align elements */
+    margin-right: 10vh;
+    margin-left: 8vh;
+    padding-left: 2vh;
+}
+/* h2 styling for chosen items from arrays */
+h2{
+    /* align text in center and change to italics */
+    text-align: center;
+    font-style: italic;
+    /* white text colour with red text shadow to simulate a glowing effect */
+    color: white;
+    text-shadow: 1px 1px 10px red;
+}
+/* img styling for potential story items */
+img {
+    /* set small width and height to match toy */
+    width: 12vh;
+    height: 12vh;
+    margin-left: 18%;
+}
+/* figcaption styling for text under each img */
+figcaption{
+    /* align text in centre and make it bold */
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 4.2%;
+}
+/* general button styling */
+button{
+    height: 50px;
+    width: auto;
+    /* make buttons rounded to match toy */
+    border-radius: 50%;
+    margin: 1%;
+    margin-left: 3%;
+}
+/******************************
+    STYLING FOR ITEMS SECTION
+*******************************/
+/* general items section styling */
+.items {
+    /* set to grid with equal areas for five div elements */
+    display: grid;
+    grid-template-areas: div div div div div;
+    grid-template-columns: repeat(5, 20%);
+}
+/* nouns background set to purple to match toy */
+.nounItems{
+    background-color: purple;
+}
+/* verbs background set to blue to match toy */
+.verbItems{
+    background-color: blue;
+}
+/* adjectives background set to green to match toy */
+.adjectiveItems{
+    background-color: green;
+}
+/* nouns2 background set to orange to match toy */
+.noun2Items{
+    background-color: orange;
+}
+/* settings background set to pink to match toy */
+.settingItems{
+    background-color: pink;
+}
+/*******************************
+    STYLING FOR BUTTONS SECTION
+********************************/
+/* general buttons section styling */
+.buttons{
+    /* set to grid with three rows for each div */
+    display: grid;
+    grid-template-areas:    div
+                            div
+                            div;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+/* background colour for each button matches backgrounds from items section */
+.nouns{
+    background-color: purple;
+}
+.verbs{
+    background-color: blue;
+}
+.adjectives{
+    background-color: green;
+}
+.nouns2{
+    background-color: orange;
+}
+.settings{
+    background-color: pink;
+}
+/* img in mascot div set to large height */
+.mascot > img{
+    height: 400px;
+    width: auto;
+}
+/* img in bottom div (fake speaker) set to semi-large height */
+.bottom > img{
+    height: 220px;
+    width: auto;
+    margin-left: 5%;
+}
+/* colours set for speak, surprise, and reset buttons */
+.speak{
+    background-color: lime;
+}
+.surprise{
+    background-color: aqua;
+}
+.reset{
+    background-color: crimson;
+}

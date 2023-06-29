@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Assignment 1 | COMP1073 Client-Side JavaScript</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	<!-- section to hold different display elements for storymaker -->
+	<section class="items">
+		<!-- divs to hold each different column of story options; each div has a class name to target in JS and CSS files -->
+		<!-- all images used are not my own; original source links found in each img src tag -->
+		<div class="nounItems">
+			<!-- h1 and h2 elements used to display section number (e.g., 1 is for Nouns) and to display chosen items from arrays -->
+			<h1>1</h1>
+			<!-- h2 will be dynamically changed when a new array item is chosen as the h2 textContent will be replaced by chosen item -->
+			<h2 class="chosenNoun">Noun</h2>
+			<!-- img and figcaption used to replicate storymaker toy -->
+			<img
+				src="https://static.vecteezy.com/system/resources/previews/012/587/539/original/3d-rendering-turkey-thanksgiving-icon-png.png">
+			<figcaption>The turkey</figcaption>
+			<img src="https://em-content.zobj.net/thumbs/160/apple/96/peach_1f351.png">
+			<figcaption>My ass</figcaption>
+			<img src="https://preview.redd.it/vd2t8vcvyc001.png?auto=webp&s=8d5c4c55704ad7623013600e75489087d81d404f">
+			<figcaption>Mario Mario</figcaption>
+			<img
+				src="https://static.wikia.nocookie.net/marvelvscapcom/images/b/ba/Firebrand_UMvC3_artwork.png/revision/latest?cb=20200105055758">
+			<figcaption>The Demon King</figcaption>
+			<img
+				src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1f2e3247-62d6-4d91-8b66-596cdde4d62b/densxgg-97a73ecd-e27a-43cd-806d-156166c3d686.png/v1/fill/w_792,h_1009/john_cena_png_render_wwe_2021_by_v_mozz_densxgg-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTYzMSIsInBhdGgiOiJcL2ZcLzFmMmUzMjQ3LTYyZDYtNGQ5MS04YjY2LTU5NmNkZGU0ZDYyYlwvZGVuc3hnZy05N2E3M2VjZC1lMjdhLTQzY2QtODA2ZC0xNTYxNjZjM2Q2ODYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Z9BkMk57-Tlo-Rl3UmSHrGpUSJgwHddUH-6bx-ibWLs">
+			<figcaption>John Cena</figcaption>
+		</div>
+		<div class="verbItems">
+			<h1>2</h1>
+			<h2 class="chosenVerb">Verb</h2>
+			<img
+				src="https://static.wikia.nocookie.net/skyblock_roblox/images/3/35/%2770s_Chair_Render_2000x2000.png/revision/latest?cb=20210502103422">
+			<figcaption>sat on</figcaption>
+			<img src="https://images.pngnice.com/download/2007/Monkey-D-Luffy-PNG-Picture.png">
+			<figcaption>ate</figcaption>
+			<img
+				src="https://static.vecteezy.com/system/resources/previews/020/918/098/original/smoke-and-fire-explosion-isolated-3d-render-png.png">
+			<figcaption>destroyed</figcaption>
+			<img src="https://i.pinimg.com/originals/c3/c6/c8/c3c6c8419918413cf9abd21c17e54293.png">
+			<figcaption>did battle with</figcaption>
+			<img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-2-1.png">
+			<figcaption>tweeted about</figcaption>
+		</div>
+		<div class="adjectiveItems">
+			<h1>3</h1>
+			<h2 class="chosenAdjective">Adjective</h2>
+			<img
+				src="https://static.wikia.nocookie.net/fatalbert/images/7/75/Fat_Albert_Render.png/revision/latest/scale-to-width-down/250?cb=20220503045122">
+			<figcaption>a fat</figcaption>
+			<img
+				src="https://supadu-io.imgix.net/harpercollins-icanread/icanread-site/character/flat-stanley-large.png">
+			<figcaption>a skinny</figcaption>
+			<img
+				src="https://cdn.shopify.com/s/files/1/1061/1924/products/Emoji_Icon_-_Clown_emoji_large.png?v=1571606089">
+			<figcaption>a funny</figcaption>
+			<img
+				src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f359881d-6bb2-4391-aba6-779f7084edd4/d9vpswy-08b0c155-7c35-4fc7-a108-40757547c774.png/v1/fill/w_602,h_903/ant_man____transparent_by_asthonx1_d9vpswy-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAzIiwicGF0aCI6IlwvZlwvZjM1OTg4MWQtNmJiMi00MzkxLWFiYTYtNzc5ZjcwODRlZGQ0XC9kOXZwc3d5LTA4YjBjMTU1LTdjMzUtNGZjNy1hMTA4LTQwNzU3NTQ3Yzc3NC5wbmciLCJ3aWR0aCI6Ijw9NjAyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.R0so273DdWGmJXJFGO0Dmj14dHMnXG-c235kobGZ8h8">
+			<figcaption>a tiny</figcaption>
+			<img src="https://www.shareicon.net/data/2015/05/08/35193_blue_400x400.png">
+			<figcaption>a blue</figcaption>
+		</div>
+		<div class="noun2Items">
+			<h1>4</h1>
+			<h2 class="chosenNoun2">Noun</h2>
+			<img
+				src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aaa79357-9476-4c1d-b9a8-6e881f2449d3/decay6y-906c24d5-79cb-4157-82dd-f474bbec3b1e.png/v1/fill/w_512,h_512/familyguy_chicken_by_buffy2ville_decay6y-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvYWFhNzkzNTctOTQ3Ni00YzFkLWI5YTgtNmU4ODFmMjQ0OWQzXC9kZWNheTZ5LTkwNmMyNGQ1LTc5Y2ItNDE1Ny04MmRkLWY0NzRiYmVjM2IxZS5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.x3I0bdI320egeK5AZ4hMGIji6Wvsqvy27lg-jvXE0Ww">
+			<figcaption>chicken</figcaption>
+			<img
+				src="https://static.wikia.nocookie.net/fantendo/images/a/ad/Fortnite_Man_Render.png/revision/latest/scale-to-width-down/1200?cb=20180703130705">
+			<figcaption>Fortnite dude</figcaption>
+			<img
+				src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ab5019ea-5474-4808-a371-b962b2d78205/demwl70-6e12f70f-67f3-415b-b505-6dc2ba2b1d01.png/v1/fill/w_608,h_586/world_of_zoo___mario_the_elephant_render_by_gabothebull203_demwl70-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTg2IiwicGF0aCI6IlwvZlwvYWI1MDE5ZWEtNTQ3NC00ODA4LWEzNzEtYjk2MmIyZDc4MjA1XC9kZW13bDcwLTZlMTJmNzBmLTY3ZjMtNDE1Yi1iNTA1LTZkYzJiYTJiMWQwMS5wbmciLCJ3aWR0aCI6Ijw9NjA4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.xMcO1MvlU1V-4EuE0BrDXeU0cA3p9fuXvK_LGu5ESDI">
+			<figcaption>elephant</figcaption>
+			<img
+				src="https://static.wikia.nocookie.net/debatesjungle/images/8/87/Agent_p_by_plzexplode-d5d9i90.png/revision/latest?cb=20211018230207">
+			<figcaption>platypus</figcaption>
+			<img
+				src="https://static.wikia.nocookie.net/zelda/images/2/2a/Link_Hyrule_Warriors.png/revision/latest?cb=20140620205907">
+			<figcaption>Link</figcaption>
+		</div>
+		<div class="settingItems">
+			<h1>5</h1>
+			<h2 class="chosenSetting">Setting</h2>
+			<img src="https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mars.png">
+			<figcaption>on Mars</figcaption>
+			<img
+				src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/377bb3e8-ff8c-4984-8530-64b9afb9d321/dexzhp2-b7303ea3-943a-44b7-97ab-61d4738cbb11.png/v1/fill/w_1133,h_705/pro_wrestling_ring_4k_hd_png_by_rahultr_dexzhp2-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzk3IiwicGF0aCI6IlwvZlwvMzc3YmIzZTgtZmY4Yy00OTg0LTg1MzAtNjRiOWFmYjlkMzIxXC9kZXh6aHAyLWI3MzAzZWEzLTk0M2EtNDRiNy05N2FiLTYxZDQ3MzhjYmIxMS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.cFthIRhOGmbkOnRTv5DIUDoyY2cxhlsPVWOXOKffXo4">
+			<figcaption>in the ring</figcaption>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/BurgerKingLogoDileo.png">
+			<figcaption>at Burger King</figcaption>
+			<img
+				src="https://png.pngtree.com/png-clipart/20230411/original/pngtree-realistic-red-tomato-digital-artwork-png-image_9045537.png">
+			<figcaption>in the garden</figcaption>
+			<img src="https://file.bricklink.info/19/844/844144.png">
+			<figcaption>at Hyrule Castle</figcaption>
+		</div>
+	</section>
+	<!-- section to hold pressable buttons for storymaker -->
+	<section class="buttons">
+		<div>
+			<!-- five buttons set to create story; each button has a class to target each button from js file -->
+			<button class="nouns">1 (Noun)</button>
+			<button class="verbs">2 (Verb)</button>
+			<button class="adjectives">3 (Adjective)</button>
+			<button class="nouns2">4 (Noun)</button>
+			<button class="settings">5 (Setting)</button>
+		</div>
+		<!-- div to hold 'mascot' img for toy to replicate example given -->
+		<div class="mascot">
+			<img src="https://png.pngtree.com/png-clipart/20230330/original/pngtree-3d-male-brain-character-reading-a-note-book-with-star-png-image_9009077.png">
+		</div>
+		<!-- div to hold img of a speaker (to replicate example given) and clickable bottom buttons for toy -->
+		<div class="bottom">
+			<img src="https://svgsilh.com/png-512/2887991.png">			
+			<button class="speak">Speak</button>
+			<button class="surprise">Surprise</button>
+			<button class="reset">Reset</button>
+			<!-- refernce to JS file -->
+			<script src="js/app.js"></script>
+		</div>
+	</section>
+</body>
+
+</html>
